@@ -1,6 +1,9 @@
 class Dice {
 	static function main() {
 
+		//Define the variables: 
+		var SIDES = 6; 
+
 		function Display(screen) {
 
 			if (screen == 'start') {
@@ -8,6 +11,19 @@ class Dice {
 			}
 		}
 
-		Display('start'); 
+		function Ai() {
+
+			//Define actions: 
+			function roll() {
+				//For now just return the total number of sides on this dice: 
+				return SIDES; 
+			}
+
+			//Ai starts up: 
+			Display('start'); 
+			
+		}
+
+		Ai(); 
 	}
 }
