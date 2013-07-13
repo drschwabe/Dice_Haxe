@@ -1,6 +1,6 @@
 ### Compile info ###
 
-This script is coded in Haxe and targets Neko (a language with a  lightweight VM that makes it easy to make command line apps with Haxe). 
+This script is coded in Haxe and targets Neko (a language with a  lightweight VM; easy for making command line apps with Haxe).
 
 
 Install **[Haxe](http://haxe.org/download)**<br />(including Neko)<br /><br />

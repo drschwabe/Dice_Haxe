@@ -31,8 +31,8 @@ class Dice {
 			//Define actions: 
 			function roll() {
 				//Generate a random number from 1 to 6:  
-				var computation = Math.round(Math.random() * 5) + 1; 
-				
+				var computation = Math.ceil(Math.random() * SIDES - 1) + 1; 
+
 				//Convert to string and return: 
 				return Std.string(computation); 
 			}
