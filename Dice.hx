@@ -9,10 +9,15 @@ class Dice {
 
 			if (screen == 'start') {
 				Sys.println("Welcome to DICE.  Are you ready to roll?\n(R)oll (E)xit");
+
 			} else if (screen == 'roll') {
 				Sys.println("Okay, about to roll!\n\n"); 
+
 			} else if (screen == diceResult) {
 				Sys.println("You rolled a " + diceResult + "\n\n"); 
+			
+			} else if (screen == 'noRoll') {
+				Sys.println("Why u no wanna play dice?\n\n"); 
 			}
 		}
 
@@ -31,8 +36,11 @@ class Dice {
 
 			//Ai starts up: 
 			Display('start'); 
+
+			//Ask user for input: 
 			var readyAnswer = Input(); 
 
+			//Process input: 
 			if (readyAnswer == 'r' || readyAnswer == 'R') {
 
 				//Tell user what is going on:
@@ -43,6 +51,11 @@ class Dice {
 
 				//Send result to the Display: 
 				Display(diceResult); 
+				
+			} else {
+
+				//Say bye: 
+				Display('noRoll'); 
 			}
 
 		}
