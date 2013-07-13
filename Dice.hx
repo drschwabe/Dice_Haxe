@@ -30,8 +30,11 @@ class Dice {
 
 			//Define actions: 
 			function roll() {
-				//For now just return the total number of sides on this dice: 
-				return Std.string(SIDES); 
+				//Generate a random number from 1 to 6:  
+				var computation = Math.round(Math.random() * 5) + 1; 
+				
+				//Convert to string and return: 
+				return Std.string(computation); 
 			}
 
 			//Ai starts up: 
@@ -51,7 +54,7 @@ class Dice {
 
 				//Send result to the Display: 
 				Display(diceResult); 
-				
+
 			} else {
 
 				//Say bye: 
