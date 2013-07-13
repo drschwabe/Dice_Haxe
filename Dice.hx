@@ -7,8 +7,15 @@ class Dice {
 		function Display(screen) {
 
 			if (screen == 'start') {
-				Sys.println("Welcome to DICE.  Are you ready to roll?");
+				Sys.println("Welcome to DICE.  Are you ready to roll?\n(R)oll (E)xit");
+			} else if (screen == 'roll') {
+				Sys.println("Okay, about to roll!\n\n"); 
 			}
+		}
+
+		function Input() {
+			var userInput = Sys.stdin().readLine(); 
+			return userInput;
 		}
 
 		function Ai() {
@@ -21,7 +28,12 @@ class Dice {
 
 			//Ai starts up: 
 			Display('start'); 
-			
+			var readyAnswer = Input(); 
+
+			if (readyAnswer == 'r' || readyAnswer == 'R') {
+				Display('roll'); 
+			}
+
 		}
 
 		Ai(); 
