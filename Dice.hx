@@ -3,6 +3,7 @@ class Dice {
 
 		//Define the variables: 
 		var SIDES = 6; 
+		var diceResult = null; 
 
 		function Display(screen) {
 
@@ -10,6 +11,8 @@ class Dice {
 				Sys.println("Welcome to DICE.  Are you ready to roll?\n(R)oll (E)xit");
 			} else if (screen == 'roll') {
 				Sys.println("Okay, about to roll!\n\n"); 
+			} else if (screen == diceResult) {
+				Sys.println("You rolled a " + diceResult + "\n\n"); 
 			}
 		}
 
@@ -23,7 +26,7 @@ class Dice {
 			//Define actions: 
 			function roll() {
 				//For now just return the total number of sides on this dice: 
-				return SIDES; 
+				return Std.string(SIDES); 
 			}
 
 			//Ai starts up: 
@@ -31,7 +34,15 @@ class Dice {
 			var readyAnswer = Input(); 
 
 			if (readyAnswer == 'r' || readyAnswer == 'R') {
+
+				//Tell user what is going on:
 				Display('roll'); 
+
+				//Perform dice roll:
+				diceResult = roll();
+
+				//Send result to the Display: 
+				Display(diceResult); 
 			}
 
 		}
